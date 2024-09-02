@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+     
+}
+
+ #main{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab);
+     background-size: 300% 300%;
+     animation: color 12s ease-in-out infinite;
+ }
+
+ @keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+ }
+
+ #panel{
+    width: 80%;
+    height: 80%;
+    border-radius: 1rem;
+    background-color: black;
+    overflow: hidden;
+ }
+
+ #panel-top{
+    display: flex;
+    padding: 0 30%;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    width: 100%;
+    height: 80px;
+    background-color: aliceblue;
+     
+ }
+
+ #element{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+     
+ }
+
+ #element h3{
+    font-weight: 600;
+    font-size: 20px;
+ }
+
+ .box{
+    padding: 10px 20px;
+    background-color: rgb(38, 38, 48);
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 20px;
+ }
+
+ #panel-bttm{
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color:aqua;
+    align-items: center;
+    justify-content: center;
+     
+ }
+
+ .bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000;
+    transition: background 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.bubble:hover {
+    background: aliceblue; /* Change background color on hover */
+    color: #000; /* Maintain text color on hover */
+}
+
+
+
+ #restartBtn {
+    background-color: rgb(111, 200, 220);
+    color: #000;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  #restartBtn:hover {
+    background-color: aqua;
+  }
+
+  #startBtn {
+    background-color: rgb(111, 200, 220);
+    color: #000;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #startBtn:hover {
+    background-color: aqua;
+  }
+  
+
+
+
+ /* Responsive Design */
+
+/* For screens that are 1650px wide or less */
+@media (max-width: 1650px) {
+    #panel {
+        width: 90%;
+        height: 90%;
+    }
+
+    #panel-top {
+        padding: 0 20%;
+        height: 80px;
+    }
+
+    #element {
+        gap: 15px;
+    }
+
+    #element h3 {
+        font-size: 18px;
+    }
+
+    .box {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    #panel-bttm {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .bubble {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #restartBtn, #startBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+/* For screens that are 768px wide or less */
+@media (max-width: 768px) {
+    #panel {
+        width: 90%;
+        height: 90%;
+    }
+
+    #panel-top {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: 80px;
+    }
+
+    #element {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    #element h3 {
+        font-size: 18px;
+    }
+
+    .box {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    #panel-bttm {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .bubble {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #restartBtn, #startBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* For screens that are 480px wide or less */
+@media (max-width: 480px) {
+    #panel {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    #panel-top {
+        padding: 5px;
+    }
+
+    #element h3 {
+        font-size: 16px;
+    }
+
+    .box {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .bubble {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #restartBtn, #startBtn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
